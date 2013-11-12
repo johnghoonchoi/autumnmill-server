@@ -13,10 +13,9 @@
 	PreparedStatement pstmt = null;
 	
 	try{
-		String jdbcDriver = "jdbc:mysql://localhost:3306/chap12";;
+		String jdbcDriver = "jdbc:mysql://localhost:3306/chap12";
 		String dbUser = "root";
 		String dbPass = "3783296w";
-		String query = "select * from member order by memberid";
 		
 		conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
 		pstmt = conn.prepareStatement("insert into member values(?,?,?,?)");
