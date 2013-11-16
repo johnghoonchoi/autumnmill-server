@@ -75,5 +75,9 @@ if(conn != null) try{ conn.close();} catch(SQLException ex) {}
 </table>
 
 
+<input type="button"  value="입력페이지로!" onclick="location.href='input.jsp'";>
+<input type="button"  value="메인페이지로!" onclick="location.href='main.jsp'";>
+
+
 </body>
 </html>
