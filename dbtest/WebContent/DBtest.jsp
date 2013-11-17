@@ -3,26 +3,28 @@
 <%@ page import="java.sql.*"%>
 <%
 	request.setCharacterEncoding("euc-kr");
-	String memberID = request.getParameter("txtid");
-	String password = request.getParameter("txtpassword");
-	String name = request.getParameter("txtname");
-	String email = request.getParameter("txtemail");
-
+	String menuname = request.getParameter("txtmenuname");
+	String price = request.getParameter("txtprice");
+	String category = request.getParameter("rdcategory");
+	String image = request.getParameter("txtimg");
+	String about = request.getParameter("txtabout");
+	
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	
 	try{
-		String jdbcDriver = "jdbc:mysql://localhost:3306/chap12";
+		String jdbcDriver = "jdbc:mysql://localhost:3306/autumnmill";
 		String dbUser = "root";
-		String dbPass = "3783296w";
+		String dbPass = "1q2w3e4r";
 		
 		conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
-		pstmt = conn.prepareStatement("insert into member values(?,?,?,?)");
-		pstmt.setString(1, memberID);
-		pstmt.setString(2, password);
-		pstmt.setString(3, name);
-		pstmt.setString(4, email);
+		pstmt = conn.prepareStatement("insert into menu values(?,?,?,?,?)");
+		pstmt.setString(1, menuname);
+		pstmt.setString(2, price);
+		pstmt.setString(3, category);
+		pstmt.setString(4, image);
+		pstmt.setString(5, about);
 		pstmt.executeUpdate();
 		
 	}
@@ -38,7 +40,10 @@
 
 
 <html>
-<head><title>asd</title></head>
-<body>member table에 새로운 레코드 삽입
+<head><title>오오오오</title></head>
+<body>menu table에 새로운 레코드 삽입 완료!
+<br>
+<input type="button" value="입력페이지로!" onclick="location.href='input.jsp'";>
+<input type="button" value="조회 페이지로!" onclick="location.href='ViewPage.jsp'";>
 </body>
 </html>

@@ -10,6 +10,13 @@ public class Jong {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
+	/*
+	 * 
+	 * <jsp:useBean id="test" class="jong.Jong" scope="page" />
+<% test.setName("닥쳐"); %>
+<%= test.getName() %>
+	 */
 	
 }
+

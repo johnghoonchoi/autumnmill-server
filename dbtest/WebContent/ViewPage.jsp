@@ -1,11 +1,12 @@
 <%@ page contentType="text/html; charset=euc-kr"%>
 <%@ page import="java.sql.*"%>
-<jsp:useBean id="test" class="jong.Jong" scope="page" />
+
 <%
-String memberID = request.getParameter("txtid");
-String password = request.getParameter("txtpassword");
-String name = request.getParameter("txtname");
-String email = request.getParameter("txtemail");
+String menuname = request.getParameter("txtmenuname");
+String price = request.getParameter("txtprice");
+String category = request.getParameter("rdcategory");
+String image = request.getParameter("");
+String about = request.getParameter("txtabout");
 
 
 %>
@@ -14,13 +15,15 @@ String email = request.getParameter("txtemail");
 <html>
 <head><title>asd</title></head>
 <body>
-<% test.setName("´ÚÃÄ"); %>
-<%= test.getName() %>
-<table width="100%">
+
+<table width="100%" border="1">
 <tr>
-<td> name</td>
-<td>id</td>
-<td>email</td>
+<td>menu name</td>
+<td>price</td>
+<td>category</td>
+<td>image</td>
+<td>about</td>
+
 </tr>
 <%
 Class.forName("com.mysql.jdbc.Driver");
@@ -29,10 +32,10 @@ Statement stmt = null;
 ResultSet rs = null;
 
 try{
-String jdbcDriver = "jdbc:mysql://localhost:3306/chap12";;
+String jdbcDriver = "jdbc:mysql://localhost:3306/autumnmill";;
 String dbUser = "root";
-String dbPass = "3783296w";
-String query = "select * from member order by memberid";
+String dbPass = "1q2w3e4r";
+String query = "select * from menu order by menuname";
 
 conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
 
@@ -46,9 +49,12 @@ while(rs.next()){
 %>
 <tr>
 
-<td><%= rs.getString("name") %></td>
-<td><%= rs.getString("memberid") %> </td>
-<td> <%= rs.getString("email") %> </td>
+<td><%= rs.getString("menuname") %></td>
+<td><%= rs.getString("price") %> </td>
+<td> <%= rs.getString("category") %> </td>
+<td><%= rs.getString("image") %> </td>
+<td> <%= rs.getString("about") %> </td>
+
 
 </tr>
 <%}
