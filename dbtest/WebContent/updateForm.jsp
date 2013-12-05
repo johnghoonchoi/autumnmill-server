@@ -1,15 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%
+request.setCharacterEncoding("utf-8");
+String menuname = request.getParameter("txtmenuname");
+String price = request.getParameter("txtprice");
+String category = request.getParameter("rdcategory");
+String image = request.getParameter("txtimg");
+String about = request.getParameter("txtabout");
+%>
+
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>가을방아 메뉴 입력</title>
+<title>수정 페이지 입니다.</title>
 </head>
 <body>
-<h1>Input Data!</h1> <br>
+<form action="/dbtest/update.jsp" method="post">
 
-	<form action="/dbtest/DBtest.jsp" method="post">
 	<ul>
 	<li>메뉴이름 : <input type="text" name ="txtmenuname"> <br>
 	</li>
@@ -35,13 +44,7 @@
 	<li>설명 : <input type="text" name="txtabout" size="60"><br>
 	</li>
 	</ul>
-
-
-	<br>
-	<input type="submit" value="입력 완료">
-	<input type="button" value="메인페이지로!" onclick="location.href='main.jsp'";>
-	
-	
-	</form>
+<input type="submit" value="변경"> 
+</form>
 </body>
 </html>

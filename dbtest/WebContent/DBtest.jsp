@@ -1,9 +1,9 @@
 
-<%@ page contentType="text/html; charset=euc-kr"%>
+<%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="java.sql.*"%>
 <%
-	request.setCharacterEncoding("euc-kr");
-	String menuname = request.getParameter("txtmenuname");
+	request.setCharacterEncoding("utf-8");
+	String name = request.getParameter("txtmenuname");
 	String price = request.getParameter("txtprice");
 	String category = request.getParameter("rdcategory");
 	String image = request.getParameter("txtimg");
@@ -17,10 +17,13 @@
 		String jdbcDriver = "jdbc:mysql://localhost:3306/autumnmill";
 		String dbUser = "root";
 		String dbPass = "1q2w3e4r";
+		String sql ="insert into menu(p_name, p_price, p_category, p_image, p_about)";
+		sql = sql + "values(?,?,?,?,?)";
 		
 		conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
-		pstmt = conn.prepareStatement("insert into menu values(?,?,?,?,?)");
-		pstmt.setString(1, menuname);
+		pstmt = conn.prepareStatement(sql);
+		//pstmt = conn.prepareStatement("insert into menu(p_name, p_price, p_category, p_image, p_about) values(?,?,?,?,?)");
+		pstmt.setString(1, name);
 		pstmt.setString(2, price);
 		pstmt.setString(3, category);
 		pstmt.setString(4, image);
@@ -40,10 +43,10 @@
 
 
 <html>
-<head><title>¿À¿À¿À¿À</title></head>
-<body>menu table¿¡ »õ·Î¿î ·¹ÄÚµå »ðÀÔ ¿Ï·á!
+<head><title>ì˜¤ì˜¤ì˜¤ì˜¤</title></head>
+<body>menu tableì— ìƒˆë¡œìš´ ë ˆì½”ë“œ ì‚½ìž… ì™„ë£Œ!
 <br>
-<input type="button" value="ÀÔ·ÂÆäÀÌÁö·Î!" onclick="location.href='input.jsp'";>
-<input type="button" value="Á¶È¸ ÆäÀÌÁö·Î!" onclick="location.href='ViewPage.jsp'";>
+<input type="button" value="ìž…ë ¥íŽ˜ì´ì§€ë¡œ!" onclick="location.href='input.jsp'";>
+<input type="button" value="ì¡°íšŒ íŽ˜ì´ì§€ë¡œ!" onclick="location.href='ViewPage.jsp'";>
 </body>
 </html>

@@ -1,7 +1,8 @@
-<%@ page contentType="text/html; charset=euc-kr"%>
+<%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="java.sql.*"%>
 
 <%
+request.setCharacterEncoding("utf-8");
 String menuname = request.getParameter("txtmenuname");
 String price = request.getParameter("txtprice");
 String category = request.getParameter("rdcategory");
@@ -18,12 +19,14 @@ String about = request.getParameter("txtabout");
 
 <table width="100%" border="1">
 <tr>
+<td>no</td>
 <td>menu name</td>
 <td>price</td>
 <td>category</td>
 <td>image</td>
 <td>about</td>
-
+<td>ìˆ˜ì •</td>
+<td>ì‚­ì œ</td>
 </tr>
 <%
 Class.forName("com.mysql.jdbc.Driver");
@@ -35,7 +38,7 @@ try{
 String jdbcDriver = "jdbc:mysql://localhost:3306/autumnmill";;
 String dbUser = "root";
 String dbPass = "1q2w3e4r";
-String query = "select * from menu order by menuname";
+String query = "select * from menu order by p_no";
 
 conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
 
@@ -48,14 +51,14 @@ while(rs.next()){
 
 %>
 <tr>
-
-<td><%= rs.getString("menuname") %></td>
-<td><%= rs.getString("price") %> </td>
-<td> <%= rs.getString("category") %> </td>
-<td><%= rs.getString("image") %> </td>
-<td> <%= rs.getString("about") %> </td>
-
-
+<td><%= rs.getString("p_no") %>
+<td><%= rs.getString("p_name") %></td>
+<td><%= rs.getString("p_price") %> </td>
+<td> <%= rs.getString("p_category") %> </td>
+<td><%= rs.getString("p_image") %> </td>
+<td> <%= rs.getString("p_about") %> </td>
+<td><input type="button" value="ìˆ˜ì •" onclick="location.href='updateForm.jsp'";>
+<td><input type="button" value="ì‚­ì œ" onclick="location.href='input.jsp'";></td>
 </tr>
 <%}
 }
@@ -81,8 +84,8 @@ if(conn != null) try{ conn.close();} catch(SQLException ex) {}
 </table>
 
 
-<input type="button"  value="ÀÔ·ÂÆäÀÌÁö·Î!" onclick="location.href='input.jsp'";>
-<input type="button"  value="¸ÞÀÎÆäÀÌÁö·Î!" onclick="location.href='main.jsp'";>
+<input type="button"  value="ìž…ë ¥íŽ˜ì´ì§€ë¡œ!" onclick="location.href='input.jsp'";>
+<input type="button"  value="ë©”ì¸íŽ˜ì´ì§€ë¡œ!" onclick="location.href='main.jsp'";>
 
 
 </body>
