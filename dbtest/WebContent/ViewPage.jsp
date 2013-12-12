@@ -14,7 +14,7 @@ String about = request.getParameter("txtabout");
 
 
 <html>
-<head><title>asd</title></head>
+<head><title>조회 페이지 입니다.</title></head>
 <body>
 
 <table width="100%" border="1">
@@ -25,8 +25,6 @@ String about = request.getParameter("txtabout");
 <td>category</td>
 <td>image</td>
 <td>about</td>
-<td>수정</td>
-<td>삭제</td>
 </tr>
 <%
 Class.forName("com.mysql.jdbc.Driver");
@@ -57,8 +55,6 @@ while(rs.next()){
 <td> <%= rs.getString("p_category") %> </td>
 <td><%= rs.getString("p_image") %> </td>
 <td> <%= rs.getString("p_about") %> </td>
-<td><input type="button" value="수정" onclick="location.href='updateForm.jsp'";>
-<td><input type="button" value="삭제" onclick="location.href='input.jsp'";></td>
 </tr>
 <%}
 }

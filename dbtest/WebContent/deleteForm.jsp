@@ -10,8 +10,10 @@
 <body>
 <form action="/dbtest/delete.jsp" method="post">
 	삭제 할 행 번호를 입력 하세요 : <input type="text" name="txtnumber">
-<input type="submit" value="삭제">
-<input type="button" value="취소"> 
+<input type="submit" value="삭제"> 
+<input type="button" value="수정 페이지로!" onclick="location.href='updateForm.jsp'">
+<input type="button" value="메인 페이지로!" onclick="location.href='main.jsp'">
+
 </form>
 </body>
 </html>

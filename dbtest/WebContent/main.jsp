@@ -10,8 +10,11 @@
 <h1>가을방아 서버 입력 페이지 입니다.</h1>
 <img src="http://skin011.com.ne.kr/HOME/tag1/img/ani_pskippy.gif"> 
 <div>
-<input type="button" value="입력페이지로!" onclick="location.href='input.jsp'";>
-<input type="button" value="조회 페이지로!" onclick="location.href='ViewPage.jsp'";>
+<input type="button" value="입력페이지로!" onclick="location.href='input.jsp'">
+<input type="button" value="조회 페이지로!" onclick="location.href='ViewPage.jsp'">
+<input type="button" value="수정 페이지로!" onclick="location.href='updateForm.jsp'">
+<input type="button" value="삭제 페이지로!" onclick="location.href='deleteForm.jsp'">
+
 </div>
 </body>
 </html>

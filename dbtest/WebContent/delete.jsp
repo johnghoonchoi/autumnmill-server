@@ -40,6 +40,10 @@ finally{
 <title>Insert title here</title>
 </head>
 <body>
-ㅇ/ㅅ/
+<input type="button" value="main" onclick="location.href='main.jsp'">
+<input type="button" value="delete" onclick="location.href='deleteForm.jsp'">
+<input type="button" value="update" onclick="location.href='updateForm.jsp'">
+<input type="button" value="view" onclick="location.href='ViewPage.jsp'">
+
 </body>
 </html>

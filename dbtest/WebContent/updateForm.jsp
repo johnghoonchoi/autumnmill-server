@@ -45,6 +45,9 @@ String about = request.getParameter("txtabout");
 	</li>
 	</ul>
 <input type="submit" value="변경"> 
+<input type="button" value="취소" onclick="location.href='main.jsp'";>
+<input type="button" value="삭제 페이지로!" onclick="location.href='deleteForm.jsp'";>
+
 </form>
 </body>
 </html>

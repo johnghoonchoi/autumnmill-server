@@ -51,6 +51,10 @@ finally{
 <%=
 	updateCount
 %>
-수정
+수정 완료
+<input type="button" value="메인 페이지로!" onclick="location.href='main.jsp'">
+<input type="button" value="조회페이지로" onclick="location.href='ViewPage.jsp'">
+<input type="button" value="삭제 페이지로!" onclick="location.href='deleteForm.jsp'">
+
 </body>
 </html>

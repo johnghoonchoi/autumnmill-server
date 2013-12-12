@@ -46,7 +46,7 @@
 <head><title>오오오오</title></head>
 <body>menu table에 새로운 레코드 삽입 완료!
 <br>
-<input type="button" value="입력페이지로!" onclick="location.href='input.jsp'";>
-<input type="button" value="조회 페이지로!" onclick="location.href='ViewPage.jsp'";>
+<input type="button" value="입력페이지로!" onclick="location.href='input.jsp'">
+<input type="button" value="조회 페이지로!" onclick="location.href='ViewPage.jsp'">
 </body>
 </html>
