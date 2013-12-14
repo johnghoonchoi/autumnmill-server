@@ -8,8 +8,8 @@
 </head>
 <body>
 <h1>Input Data!</h1> <br>
-
-	<form action="/dbtest/DBtest.jsp" method="post">
+<form action="/dbtest/DBtest.jsp" method="post" ENCTYPE="multipart/form-data">
+		
 	<ul>
 	<li>메뉴이름 : <input type="text" name ="txtmenuname"> <br>
 	</li>
@@ -30,11 +30,12 @@
 	</li>
 	</ul>
 	</li>
-	<li>이미지 : <input type="text" name="txtimg"> <br>
+	<li>이미지 : <input type="file" name="txtimg"> <br>
 	</li>
 	<li>설명 : <input type="text" name="txtabout" size="60"><br>
 	</li>
 	</ul>
+	
 
 
 	<br>

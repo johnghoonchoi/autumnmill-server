@@ -2,6 +2,7 @@
 <%@ page import="java.sql.*"%>
 
 <%
+/*
 request.setCharacterEncoding("utf-8");
 String menuname = request.getParameter("txtmenuname");
 String price = request.getParameter("txtprice");
@@ -9,7 +10,7 @@ String category = request.getParameter("rdcategory");
 String image = request.getParameter("");
 String about = request.getParameter("txtabout");
 
-
+*/
 %>
 
 
