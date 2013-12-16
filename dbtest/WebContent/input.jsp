@@ -24,8 +24,6 @@
 	</li>
 	<li>개별포장떡 : <input type="radio" name ="rdcategory" value="개별포장떡" > <br>
 	</li>
-	<li>판매떡 : <input type="radio" name ="rdcategory" value="답례떡" > <br>
-	</li>
 	<li>떡케익 : <input type="radio" name ="rdcategory" value="떡케익" > <br>
 	</li>
 	</ul>

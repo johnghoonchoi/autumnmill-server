@@ -14,7 +14,7 @@ public class Jong {
 	/*
 	 * 
 	 * <jsp:useBean id="test" class="jong.Jong" scope="page" />
-<% test.setName("닥쳐"); %>
+<% test.setName("testtt"); %>
 <%= test.getName() %>
 	 */
 	

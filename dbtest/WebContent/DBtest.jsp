@@ -6,7 +6,7 @@
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 <%@ page import="java.util.*" %>
 <%
-String urlurl = "http://localhost:8080/dbtest/picfolder/";
+String urlurl = "192.168.0.30:8080/dbtest/picfolder/";
 String fileName ="";
 	try{
 		String savePath = "/Users/choijohnghoon/autumnmill-server/dbtest/WebContent/picfolder";
@@ -26,11 +26,10 @@ String fileName ="";
  		String name = multi.getParameter("txtmenuname");
  		String price = multi.getParameter("txtprice");
  		String category = multi.getParameter("rdcategory");
- 		String image = "<img src="+urlurl+fileName+">";
+ 		String image = "<img src="+"'"+urlurl+fileName+"'"+">";
  		String about = multi.getParameter("txtabout");
-
- 		
- 		
+		
+ 		System.out.println(image);
  		
  		Class.forName("com.mysql.jdbc.Driver");
  		Connection conn = null;
@@ -91,12 +90,6 @@ String fileName ="";
 <html>
 <head><title>오오오오</title></head>
 <body>menu table에 새로운 레코드 삽입 완료!
-<img src=""/>
-<%
-out.print("<img src="+urlurl+fileName+">");
-out.print(fileName);
-%>
-
 
 <br>
 <input type="button" value="입력페이지로!" onclick="location.href='input.jsp'">

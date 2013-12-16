@@ -1,0 +1,10 @@
+[
+	{
+		"id":1,
+		"category":"선물셋트",
+		"list":
+		[
+		{"picture":"<img src=http://localhost:8080//dbtest//picfolder//asdasd2.jpg>","id":"20","price":"1500","name":"test","about":"한글테스트"},
+		{"picture":"<img src='http://localhost:8080//dbtest//picfolder//anotheric.png'>","id":"23","price":"213125566","name":"이것도테스트","about":"gggggaa"},
+		{"picture":"<img src='http://localhost:8080//dbtest//picfolder//1386010513_delivery_food.png'>","id":"27","price":"20159090","name":"ijoihoihoifasf","about":"omom212131"}]},
+		{"id":2,"category":"행사떡","list":[{"picture":"<img src='http://localhost:8080//dbtest//picfolder//hello.jpg'>","id":"21","price":"125055","name":"두번","about":"안녕하십"},{"picture":"<img src='http://localhost:8080//dbtest//picfolder//1386011025_man.png'>","id":"24","price":"25000","name":"ㅁㄴㅇㅁㄴㅇ","about":"tttees11"},{"picture":"<img src='http://localhost:8080//dbtest//picfolder//1387131469_Bread.png'>","id":"25","price":"1251555","name":"momom","about":"zzz"}]},{"id":3,"category":"개별포장떡","list":[{"picture":"<img src='http://localhost:8080//dbtest//picfolder//goodmo.jpg'>","id":"22","price":"26090","name":"jsontest","about":"ggggtest"}]},{"id":4,"category":"떡케익","list":[{"picture":"<img src='http://localhost:8080//dbtest//picfolder//1386011979_open_source_programs.png'>","id":"26","price":"12314","name":"ggg232","about":"momomo211"}]}]
