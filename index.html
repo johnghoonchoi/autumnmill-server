@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Autumnmill by johnghoonchoi</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Autumnmill</h1>
+        <p class="header">가을방아</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/johnghoonchoi/autumnmill-server/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/johnghoonchoi/autumnmill-server/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/johnghoonchoi/autumnmill-server">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/johnghoonchoi">johnghoonchoi</a></p>
+
+
+      </header>
+      <section>
+        <p>jsp로 만들어진 페이지입니다.
+mysql 데이터베이스 생성 
+계정 : root
+비밀번호 : root 로 설정되어있음.</p>
+
+<p>autumnmill 데이터베이스 생성 /권한 /사용 부분</p>
+
+<p>create databaes autumnmill
+grant all privileges on autumnmill to root@localhost identified by ‘root’;
+use autumnmill;</p>
+
+<p>menu 테이블 생성</p>
+
+<p>create table menu(
+p_no int not null primary key auto_increment,
+p_name varchar(50),
+p_price varchar(30),
+p_category varchar(30),
+p_image varchar(100),
+p_about text);</p>
+
+<p>java build path에 첨부파일인 cos.jar / json-simple-1.1.1.jar / mysqlconnector  추가합니다</p>
+
+<p>main.jsp 메인 페이지 시작입니다
+이 페이지로 deleteForm , ViewPage , updateForm, input 페이지로 이동 할 수있습니다.
+input으로 데이터를 추가 한 후  확인버튼을 누르게 되면 multipartrequest를 통하여 form방식으로 
+DBtest.jsp파일로 이동합니다. 여기서는 데이터베이스에 전달받은 값을 입력받아서 저장을 합니다.
+그다음에는 viewpage를 누르게되면 
+jsonTestTest 파일로 이동을 하여 json객체를 만들고 json파일을 만든 후에 ViewPage의 페이지가 실행이 됩니다. 그러면 데이터베이스에서 데이터들을 받아와서 화면에 표시를 해줍니다.
+updateForm은 이름을 비교하여 같으면 그 해당 칼럼의 내용을 변경하는 기능을 수행합니다.
+deleteFrom은 delete페이지로 이동하여 칼럼 번호를 입력하게되면 그 해당 칼럼이 삭제 됩니다.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
